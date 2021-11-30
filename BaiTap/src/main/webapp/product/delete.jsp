@@ -14,6 +14,7 @@
 <body>
 <c:if test='${message != null}'>
     ${message}
+    <br>
     <a href="/products?action=viewAll">View product list</a>
 </c:if>
 </body>
