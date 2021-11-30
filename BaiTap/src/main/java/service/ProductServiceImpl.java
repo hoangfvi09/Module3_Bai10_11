@@ -32,7 +32,7 @@ public class ProductServiceImpl implements ProductService {
 
 
     @Override
-    public List<Product> showAll() {
+    public List<Product> returnAll() {
         return products;
     }
 
@@ -44,7 +44,7 @@ public class ProductServiceImpl implements ProductService {
     @Override
     public int findIndexById(int id) {
         for(int i=0; i<products.size();i++){
-            if(products.get(i).getId()==i){
+            if(products.get(i).getId()==id){
                 return i;
             }
         }
@@ -57,13 +57,13 @@ public class ProductServiceImpl implements ProductService {
         if (index!=-1){
             products.remove(index);
         }
-
     }
 
 
 
     @Override
-    public void update(int id, Product product) {
-        products.set(findIndexById(id),product);
+    public void update(int id, String name, double price) {
+        products.get(findIndexById(id)).setName(name);
+        products.get(findIndexById(id)).setPrice(price);
     }
 }

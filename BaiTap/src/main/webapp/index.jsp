@@ -11,9 +11,9 @@
     <title>$Title$</title>
   </head>
   <body>
-<a href="customer?action=create">Create new product</a>
-<a href="customer?action=showAll">Show all product</a>
-<a href="customer?action=remove">Remove a product</a>
-<a href="customer?action=update">Update a product</a>
+<a href="products?action=create">Create new product</a>
+<a href="products?action=showAll">Show all product</a>
+<a href="products?action=remove">Remove a product</a>
+<a href="products?action=update">Update a product</a>
   </body>
 </html>

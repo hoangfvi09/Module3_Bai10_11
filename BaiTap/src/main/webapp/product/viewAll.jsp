@@ -1,3 +1,5 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%--
   Created by IntelliJ IDEA.
   User: hoangfvi
@@ -11,6 +13,16 @@
     <title>Show all product</title>
 </head>
 <body>
+<h2>Product List</h2>
+<c:forEach items='${products}' var="product">
+    <p>
+            ${product.getId()},    ${product.getName()},    ${product.getPrice()} , <a href="products?action=remove&id=${product.getId()}">Delete</a><br>
+    </p>
 
+</c:forEach>
+<a href="products?action=create">Create new product</a>
+<a href="products?action=showAll">Show all product</a>
+<a href="products?action=remove">Remove a product</a>
+<a href="products?action=update">Update a product</a>
 </body>
 </html>

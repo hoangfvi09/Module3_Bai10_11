@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: hoangfvi
@@ -11,6 +12,9 @@
     <title>Remove a product</title>
 </head>
 <body>
-
+<c:if test='${message != null}'>
+    ${message}
+    <a href="/products?action=viewAll">View product list</a>
+</c:if>
 </body>
 </html>

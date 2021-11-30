@@ -11,6 +11,15 @@
     <title>Update a product</title>
 </head>
 <body>
-
+<c:if test='${message !=null}'>
+    ${message}
+    <a href="/products?action=viewAll">View product list</a>
+</c:if>
+<form method="post">
+    product id: <input type="text" name = "id">
+    product new name: <input type="text" name = "name">
+    product new price: <input type="text" name = "price">
+    <button>Submit</button>
+</form>
 </body>
 </html>
